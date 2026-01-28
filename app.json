@@ -37,8 +37,6 @@
     "experiments": {
       "baseUrl": "/cross-platform-portfolio"
     },
-    "plugins": [
-      "expo-router"
-    ]
+    "plugins": []
   }
 }
