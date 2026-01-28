@@ -44,7 +44,7 @@ Ensure you have the following installed on your machine:
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/achyuthkp27/cross-platform-portfolio.git
 cd portfolio
 npm install
 ```
