@@ -1,13 +1,14 @@
 import React from 'react';
-import { Text, TouchableOpacity, TouchableOpacityProps, ActivityIndicator } from 'react-native';
+import { Text, TouchableOpacity, TouchableOpacityProps, ActivityIndicator, View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
 
 interface ButtonProps extends TouchableOpacityProps {
     className?: string;
     variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
-    size?: 'sm' | 'md' | 'lg';
+    size?: 'sm' | 'md' | 'lg' | 'xl';
     label: string;
     loading?: boolean;
+    icon?: React.ReactNode;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -17,14 +18,15 @@ export const Button: React.FC<ButtonProps> = ({
     label,
     loading,
     disabled,
+    icon,
     ...props
 }) => {
-    const baseClasses = "flex-row items-center justify-center rounded-lg font-medium transition-colors";
+    const baseClasses = "flex-row items-center justify-center rounded-xl font-medium transition-transform active:scale-95";
 
     const variantClasses = {
-        primary: "bg-blue-600 active:bg-blue-700",
+        primary: "bg-blue-600 active:bg-blue-700 shadow-lg shadow-blue-500/30",
         secondary: "bg-slate-800 dark:bg-slate-200 active:bg-slate-700",
-        outline: "border border-slate-300 dark:border-slate-700 bg-transparent active:bg-slate-100 dark:active:bg-slate-800",
+        outline: "border-2 border-slate-200 dark:border-slate-700 bg-transparent active:bg-slate-50 dark:active:bg-slate-800",
         ghost: "bg-transparent active:bg-slate-100 dark:active:bg-slate-800",
     };
 
@@ -37,8 +39,9 @@ export const Button: React.FC<ButtonProps> = ({
 
     const sizeClasses = {
         sm: "px-3 py-1.5 text-sm",
-        md: "px-4 py-2 text-base",
-        lg: "px-6 py-3 text-lg",
+        md: "px-5 py-3 text-base",
+        lg: "px-6 py-4 text-lg",
+        xl: "px-8 py-5 text-xl",
     };
 
     return (
@@ -56,7 +59,10 @@ export const Button: React.FC<ButtonProps> = ({
             {loading ? (
                 <ActivityIndicator color={variant === 'primary' ? 'white' : 'gray'} />
             ) : (
-                <Text className={twMerge("font-bold", textClasses[variant])}>{label}</Text>
+                <>
+                    {icon && <View className="mr-3">{icon}</View>}
+                    <Text className={twMerge("font-bold", textClasses[variant])}>{label}</Text>
+                </>
             )}
         </TouchableOpacity>
     );
