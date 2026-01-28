@@ -24,10 +24,21 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "title": "Achyuth KP | Full Stack Engineer",
+      "description": "Portfolio of Achyuth KP, Full Stack Engineer specializing in React, React Native, and modern tech.",
+      "themeColor": "#2563eb",
+      "meta": {
+        "google-site-verification": "generic-verification-code",
+        "og:description": "Portfolio of Achyuth KP. View my projects and skills.",
+        "og:title": "Achyuth KP | Full Stack Engineer"
+      }
     },
     "experiments": {
       "baseUrl": "/cross-platform-portfolio"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
