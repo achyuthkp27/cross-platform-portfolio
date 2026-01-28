@@ -4,18 +4,43 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
+    "dev": "expo start --web",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "desktop": "tauri dev",
+    "build:web": "expo export -p web",
+    "build:desktop": "tauri build"
   },
   "dependencies": {
+    "@expo/metro-config": "~54.0.14",
+    "@expo/metro-runtime": "~6.1.2",
+    "@react-native-async-storage/async-storage": "^2.2.0",
+    "@react-navigation/native": "^7.1.28",
+    "@react-navigation/native-stack": "^7.11.0",
+    "clsx": "^2.1.1",
     "expo": "~54.0.32",
     "expo-status-bar": "~3.0.9",
+    "lucide-react-native": "^0.563.0",
+    "moti": "^0.30.0",
+    "nativewind": "^4.2.1",
     "react": "19.1.0",
-    "react-native": "0.81.5"
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-reanimated": "~4.1.1",
+    "react-native-safe-area-context": "^5.6.2",
+    "react-native-screens": "^4.20.0",
+    "react-native-web": "^0.21.0",
+    "tailwind-merge": "^3.4.0",
+    "zustand": "^5.0.10"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^2.9.6",
     "@types/react": "~19.1.0",
+    "autoprefixer": "^10.4.23",
+    "babel-preset-expo": "^54.0.10",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
     "typescript": "~5.9.2"
   },
   "private": true
