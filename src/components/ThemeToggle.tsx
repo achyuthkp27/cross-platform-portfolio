@@ -15,15 +15,15 @@ export const ThemeToggle = () => {
         >
             <MotiView
                 key={isDark ? 'moon' : 'sun'}
-                from={{ scale: 0.5, opacity: 0, rotate: '-90deg' }}
-                animate={{ scale: 1, opacity: 1, rotate: '0deg' }}
-                exit={{ scale: 0.5, opacity: 0, rotate: '90deg' }}
-                transition={{ type: 'spring', damping: 15 }}
+                from={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ type: 'timing', duration: 200 }}
             >
                 {isDark ? (
-                    <Moon className="text-blue-400" size={24} fill="currentColor" />
+                    <Moon className="text-blue-400" size={20} fill="currentColor" />
                 ) : (
-                    <Sun className="text-amber-500" size={24} fill="currentColor" />
+                    <Sun className="text-amber-500" size={20} fill="currentColor" />
                 )}
             </MotiView>
         </TouchableOpacity>

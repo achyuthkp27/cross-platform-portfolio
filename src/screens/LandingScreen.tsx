@@ -27,9 +27,12 @@ export default function LandingScreen() {
                     <View className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl opacity-50" />
 
                     <MotiView
-                        from={{ opacity: 0, translateY: 30 }}
+                        from={{ opacity: 0, translateY: 15 }}
                         animate={{ opacity: 1, translateY: 0 }}
-                        transition={{ type: 'spring', damping: 20 }}
+                        transition={{
+                            type: 'timing',
+                            duration: 1000,
+                        }}
                         className="items-center relative z-10"
                     >
                         <View className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-4 py-1.5 rounded-full mb-8 flex-row items-center space-x-2 shadow-sm self-center">
