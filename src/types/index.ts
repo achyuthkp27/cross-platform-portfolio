@@ -14,6 +14,7 @@ export interface Experience {
     company: string;
     period: string;
     description: string;
+    techStack?: string[];
 }
 
 export interface SkillItem {

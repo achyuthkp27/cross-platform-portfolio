@@ -37,6 +37,7 @@ const MOCK_EXPERIENCE: Experience[] = [
         company: 'Tech Corp',
         period: '2023 - Present',
         description: 'Leading the frontend team in migrating legacy apps to modern React architecture.',
+        techStack: ['React', 'Next.js', 'TypeScript', 'GraphQL'],
     },
     {
         id: '2',
@@ -44,6 +45,7 @@ const MOCK_EXPERIENCE: Experience[] = [
         company: 'StartUp Inc',
         period: '2021 - 2023',
         description: 'Built and scaled the core product from MVP to 100k+ users.',
+        techStack: ['Node.js', 'PostgreSQL', 'Redis', 'Docker'],
     },
 ];
 
