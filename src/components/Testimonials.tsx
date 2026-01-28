@@ -40,40 +40,44 @@ export const Testimonials = () => {
 
                 <View className="flex-row flex-wrap justify-center gap-6">
                     {TESTIMONIALS.map((t, index) => (
-                        <MotiView
-                            key={t.id}
-                            from={{ opacity: 0, translateY: 20 }}
-                            animate={{ opacity: 1, translateY: 0 }}
-                            transition={{ type: 'spring', delay: index * 200 }}
-                            className="bg-white dark:bg-slate-900 p-8 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm flex-1 min-w-[300px] max-w-[400px] hover:shadow-xl transition-shadow duration-300"
-                        >
-                            <View className="bg-blue-100 dark:bg-blue-900/30 w-12 h-12 rounded-full items-center justify-center mb-6">
-                                <Quote className="text-blue-600 dark:text-blue-400" size={20} fill="currentColor" />
-                            </View>
+                        <View key={t.id} className="w-full md:w-[30%] min-w-[300px] flex-grow">
+                            <MotiView
+                                from={{ opacity: 0, translateY: 20 }}
+                                animate={{ opacity: 1, translateY: 0 }}
+                                transition={{ type: 'spring', delay: index * 200 }}
+                                className="flex-1"
+                            >
+                                <View className="bg-white dark:bg-slate-900 p-8 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow duration-300 h-full flex-col">
+                                    <View className="bg-blue-100 dark:bg-blue-900/30 w-12 h-12 rounded-full items-center justify-center mb-6">
+                                        <Quote className="text-blue-600 dark:text-blue-400" size={20} fill="currentColor" />
+                                    </View>
 
-                            <Text className="text-lg text-slate-700 dark:text-slate-300 mb-8 italic leading-relaxed flex-1">
-                                "{t.text}"
-                            </Text>
+                                    <Text className="text-lg text-slate-700 dark:text-slate-300 mb-8 italic leading-relaxed flex-1">
+                                        "{t.text}"
+                                    </Text>
 
-                            <View className="flex-row items-center border-t border-slate-50 dark:border-slate-800 pt-6">
-                                <View className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 items-center justify-center mr-3">
-                                    <Text className="text-white font-bold text-sm">
-                                        {t.author.charAt(0)}
-                                    </Text>
+                                    <View className="flex-row items-center border-t border-slate-50 dark:border-slate-800 pt-6">
+                                        <View className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 items-center justify-center mr-3">
+                                            <Text className="text-white font-bold text-sm">
+                                                {t.author.charAt(0)}
+                                            </Text>
+                                        </View>
+                                        <View>
+                                            <Text className="text-base font-bold text-slate-900 dark:text-white">
+                                                {t.author}
+                                            </Text>
+                                            <Text className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wide">
+                                                {t.role}
+                                            </Text>
+                                        </View>
+                                    </View>
                                 </View>
-                                <View>
-                                    <Text className="text-base font-bold text-slate-900 dark:text-white">
-                                        {t.author}
-                                    </Text>
-                                    <Text className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wide">
-                                        {t.role}
-                                    </Text>
-                                </View>
-                            </View>
-                        </MotiView>
+                            </MotiView>
+                        </View>
                     ))}
                 </View>
             </Container>
         </View>
     );
 };
+

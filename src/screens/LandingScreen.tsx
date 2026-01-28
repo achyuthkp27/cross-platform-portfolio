@@ -32,7 +32,7 @@ export default function LandingScreen() {
                         transition={{ type: 'spring', damping: 20 }}
                         className="items-center relative z-10"
                     >
-                        <View className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-4 py-1.5 rounded-full mb-8 flex-row items-center space-x-2 shadow-sm">
+                        <View className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-4 py-1.5 rounded-full mb-8 flex-row items-center space-x-2 shadow-sm self-center">
                             <Sparkles size={14} className="text-amber-500" color="#f59e0b" />
                             <Text className="text-slate-600 dark:text-slate-300 font-bold text-xs uppercase tracking-widest">
                                 Available for new projects
