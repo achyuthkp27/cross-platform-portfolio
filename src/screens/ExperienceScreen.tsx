@@ -42,8 +42,8 @@ export default function ExperienceScreen() {
                                 {/* Spacer for Desktop ZigZag */}
                                 <View className="hidden md:block md:w-1/2 md:flex-1" />
 
-                                {/* Timeline Dot */}
-                                <View className="absolute left-6 md:left-1/2 w-4 h-4 md:w-6 md:h-6 rounded-full bg-blue-600 border-2 md:border-4 border-white dark:border-slate-950 z-10 -ml-2 md:-ml-3 mt-1.5 md:mt-0" />
+                                {/* Timeline Dot - Centered using translate transform for precision */}
+                                <View className="absolute top-0 left-6 md:left-1/2 w-4 h-4 md:w-6 md:h-6 rounded-full bg-blue-600 border-2 md:border-4 border-white dark:border-slate-950 z-10 -translate-x-1/2" />
 
                                 <MotiView
                                     from={{ opacity: 0, translateX: 50 }} // Simplify mobile animation
