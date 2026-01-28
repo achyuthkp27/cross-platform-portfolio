@@ -43,17 +43,6 @@ export default function ExperienceScreen() {
                                 <View className="hidden md:block md:w-1/2 md:flex-1" />
 
                                 {/* Timeline Dot */}
-                                <View
-                                    className="absolute left-6 md:left-1/2 w-4 h-4 md:w-6 md:h-6 rounded-full bg-blue-600 border-[3px] md:border-4 border-white dark:border-slate-950 z-10"
-                                    style={{
-                                        transform: [{ translateX: -8 }], // Center the dot (w/2)
-                                        top: 0
-                                    }}
-                                // Desktop adjustment: centered
-                                // Mobile adjustment: left-6 (24px) -> center is 24px. transform -8 makes it 16px to 32px (16px width).
-                                // Just use explicit simplified positioning for dot.
-                                />
-                                {/* Re-doing dot with cleaner classes */}
                                 <View className="absolute left-6 md:left-1/2 w-4 h-4 md:w-6 md:h-6 rounded-full bg-blue-600 border-2 md:border-4 border-white dark:border-slate-950 z-10 -ml-2 md:-ml-3 mt-1.5 md:mt-0" />
 
                                 <MotiView
